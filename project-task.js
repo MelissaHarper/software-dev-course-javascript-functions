@@ -113,7 +113,7 @@ function printNames(arr) {
 // ============================================
 
 // Script 1 - Greeting multiple users
-/*Script shown during walkthrough
+/*Script 1 shown during walkthrough
 
 greet("Alice");
 greet("Bob");
@@ -121,7 +121,7 @@ greet("Charlie");
 
 */
 
-// Script written before walkthrough
+// Script 1 written before walkthrough
 let names = ["Alice", "Bob", "Charlie"];
 for (let name of names) {
    greet(name);

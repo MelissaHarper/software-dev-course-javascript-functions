@@ -36,6 +36,23 @@ reusable functions that solve specific tasks. This activity encourages:
 // 3. Capitalize the role if needed.
 // 4. Return the result.
 
+function generateBadge(name, role){
+    return `Name: ${name}, Role: ${role}`
+}
+
+// Tests
+console.log("Badge tests: ")
+let testBob = generateBadge("Bob", "Director");
+console.log(testBob);
+
+let testSam = generateBadge ("Sam", "Assistant");
+console.log(testSam);
+
+let testJim = generateBadge("Jim", "Data Input");
+console.log(testJim);
+
+let testCal = generateBadge("Cal", "Bro");
+console.log(testCal);
 
 // ============================================
 // 🧩 Task 2: Calculate Event Cost
@@ -51,7 +68,33 @@ reusable functions that solve specific tasks. This activity encourages:
 // 3. If so, apply a 10% discount.
 // 4. Return the final total.
 
+function calculateTotalCost(numAttendees, cost){
+    let total = calculateSubTotal(numAttendees, cost);
+    if (numAttendees > 100){
+        return total * .9;
+    }
+    else{
+        return total;
+    }
+}
+function calculateSubTotal(numAttendees, cost){
+return numAttendees * cost;
+}
 
+// Tests
+console.log("\nEvent Cost test. \nTrue indicates the test passed.")
+
+let testJason = calculateTotalCost(110, 20);
+console.log(testJason === 1980);
+
+let testMelissa = calculateTotalCost(240, 200);
+console.log(testMelissa === 43200);
+
+let testDarcy = calculateTotalCost(20, 200);
+console.log(testDarcy === 4000);
+
+let test2Stacey = calculateTotalCost (50, 150);
+console.log(test2Stacey === 7500);
 // ============================================
 // 🧩 Task 3: Validate Email
 // ============================================
@@ -64,7 +107,19 @@ reusable functions that solve specific tasks. This activity encourages:
 // 1. Check if the string includes both "@" and ".".
 // 2. Return true or false accordingly.
 
+function validateEmail(email){
+    return email.includes("@") && email.includes(".");
+}
 
+// Tests
+console.log("\nValidate Email: \nTrue indicates the email is valid")
+console.log(validateEmail("test@somewhere.com"));
+
+console.log(validateEmail("not.valid"));
+
+console.log(validateEmail("test1@testing.com"));
+
+console.log(validateEmail("working@lc.com"));
 // ============================================
 // 🧠 Collaborative Steps
 // ============================================
